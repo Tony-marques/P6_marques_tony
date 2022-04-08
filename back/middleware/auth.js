@@ -15,18 +15,3 @@ module.exports = (req, res, next) => {
     res.status(401).json({ erreur: "Requête non authentifiée" });
   }
 };
-// const token = req.headers.authorization.split(" ")[1];
-//   if (token) {
-//     jwt.verify(token, "RANDOM_TOKEN_SECRET", (err, decodedToken) => { // mettre la clé secrète dans le .env
-//       if (err) {
-//         res.status(401).json({ erreur: "Requête non authentifiée" });
-//       } else {
-//         req.token = decodedToken.token;
-//         console.log(req.token);
-//         next()
-//       }
-//     });
-//   } else {
-//     res.status(401).json({ erreur: "Requête non authentifiée" });
-//   }
-// };

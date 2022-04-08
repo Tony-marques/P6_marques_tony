@@ -26,7 +26,7 @@ module.exports = (req, res, next) => {
       .status(401)
       .json({
         message:
-          "le mot de passe est pas ok" +
+          "le mot de passe n'est pas bon" +
           passwordSchema.validate("password", { list: true }),
       });
   } else {

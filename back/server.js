@@ -7,7 +7,6 @@ const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
 require("dotenv").config({ path: "./config/.env" });
 require("./config/db");
-
 const saucesRoutes = require("./routes/sauce.routes");
 const authRoutes = require("./routes/user.routes");
 
@@ -29,12 +28,6 @@ app.use((req, res, next) => {
   res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
   next();
 });
-
-// app.use(
-//   mongoSanitize({
-//     replaceWith: "_",
-//   })
-// );
 
 app.use("/images", express.static(path.join(__dirname, "images")));
 // Les routes sauces
